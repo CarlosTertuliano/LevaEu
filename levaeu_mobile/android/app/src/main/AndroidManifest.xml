@@ -1,4 +1,8 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.levaeu_mobile"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:overrideLibrary="io.flutter.plugins.googlemaps">
+
     <application
         android:label="levaeu_mobile"
         android:name="${applicationName}"
@@ -29,6 +33,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+            
+        <meta-data android:name="com.google.android.geo.API_KEY"
+                android:value="@string/ANDROID_MAPS_APIKEY"/>
+                
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility?hl=en and

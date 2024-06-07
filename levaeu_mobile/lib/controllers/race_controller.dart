@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class RaceController extends ChangeNotifier{
   double lat = 0.0;
   double long = 0.0;
   String erro = '';
+  late GoogleMapController _mapsController;
 
+  /*
   RaceController(){
+    getPosicao();
+  }
+  */
+
+  get mapsController => _mapsController;
+
+  onMapCreated(GoogleMapController gmc) async{
+    _mapsController = gmc;
     getPosicao();
   }
 
@@ -15,6 +26,7 @@ class RaceController extends ChangeNotifier{
       Position position = await _currentPosition();
       lat = position.latitude;
       long = position.longitude;
+      _mapsController.animateCamera(CameraUpdate.newLatLng(LatLng(lat, long)));
     } catch (e) {
       erro = e.toString();
     }
