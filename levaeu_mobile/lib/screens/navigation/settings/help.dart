@@ -130,7 +130,7 @@ class _HelpState extends State<Help> {
                           print("Enviando ${assuntoController.text}, ${emailController.text}, ${questionController.text}");
                           assuntoController.text = "";
                           emailController.text = "";
-                          assuntoController.text = "";
+                          questionController.text = "";
                           //Navigator.push(context, MaterialPageRoute(builder: (context) => f));
 
                         }        
