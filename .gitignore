@@ -2,3 +2,7 @@
 /.vscode
 levaeu_mobile/lib/screens/register/notas
 .env
+levaeu_mobile/.env
+*.lock
+*.lock
+levaeu_mobile/packages/api_client/pubspec.lock
