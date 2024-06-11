@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:levaeu_mobile/model/race.dart';
 import 'package:levaeu_mobile/model/user_data.dart';
 import 'package:levaeu_mobile/screens/navigation/new_races/create_new_race.dart';
+import 'package:levaeu_mobile/screens/navigation/new_races/new_race_map_view.dart';
 import 'package:provider/provider.dart';
 
 class NewRace extends StatefulWidget{
@@ -122,7 +123,7 @@ class _NewRaceState extends State<NewRace> {
           child: FloatingActionButton(
             backgroundColor: const Color.fromRGBO(255, 255, 255, 1.0),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const CreateNewRace()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const NewRaceMapScreen()));
             },
             child: const Icon(
               Icons.add,
