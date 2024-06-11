@@ -39,7 +39,7 @@ class NewRaceMapView extends StatelessWidget{
       body: const Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          _NewRaceMap(target: LatLng(25.24, 55.28)),
+          _NewRaceMap(target: LatLng(-5.832325279595681, -35.205239253973794)),
         ],
       ),
 

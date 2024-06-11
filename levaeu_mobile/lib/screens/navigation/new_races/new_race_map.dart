@@ -22,13 +22,15 @@ class _NewRaceMapState extends State<_NewRaceMap>{
   @override
   Widget build(BuildContext context) {
     return GoogleMap(
+      myLocationButtonEnabled: false,
       initialCameraPosition: CameraPosition(
         target: widget.target,
-        zoom: 14,
+        zoom: 18,
       ),
       onMapCreated: (GoogleMapController controller) {
         _controller.complete(controller);
       },
+      mapType: MapType.hybrid,
     );
   }
 }

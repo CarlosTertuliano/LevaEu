@@ -1,9 +1,11 @@
+import 'package:api_client/api_client.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_config/flutter_config.dart';
 import 'package:levaeu_mobile/controllers/race_controller.dart';
 import 'package:levaeu_mobile/model/driver_car.dart';
 import 'package:levaeu_mobile/model/driver_license.dart';
 import 'package:levaeu_mobile/model/user_data.dart';
+import 'package:levaeu_mobile/repositories/maps_repositories.dart';
 import 'package:levaeu_mobile/screens/navigation/home_state.dart';
 import 'package:levaeu_mobile/screens/navigation/new_races/create_new_race.dart';
 import 'package:levaeu_mobile/screens/navigation/settings/profile.dart';
@@ -11,9 +13,16 @@ import 'package:levaeu_mobile/screens/register/registration.dart';
 import 'package:levaeu_mobile/screens/start.dart';
 import 'package:provider/provider.dart';
 
+const ANDROID_EMULATOR_BASE_URL = 'http://10.0.2.2:8080';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await FlutterConfig.loadEnvVariables();
+  //final ApiClient apiClient = ApiClient(baseUrl: ANDROID_EMULATOR_BASE_URL);
+  //final MapsRepository mapsRepository = MapsRepository(apiClient: apiClient);
+
+  //mapsRepository.fetchAddressFromUserCoordinates();
+  
 
   runApp(
     MultiProvider(

@@ -31,16 +31,23 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^1.2.1
-  provider: ^5.0.0
+  provider: ^6.1.2
   intl: ^0.17.0
-  geolocator: ^7.4.0
   flutter_config: ^2.0.2
   google_maps_flutter: ^2.6.0
   flutter_dotenv: ^5.0.2
   flutter_polyline_points: ^2.0.0
-  flutter_svg: ^1.1.0
   geocoding: ^3.0.0
   dart_frog: ^1.1.0
+  api_client:
+    path: packages/api_client
+  core:
+    path: packages/core
+  flutter_bloc: ^8.1.4
+  maps_client:
+    path: packages/maps_client
+  geolocator: ^7.4.2
+  bloc_concurrency: ^0.2.4
 
 flu  cupertino_icons: ^1.0.6
 
@@ -61,13 +68,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
-
-  # To add assets to your application, add an assets section, like this:
   assets:
     - img/logo.png
     - img/logo_sigaa.png
